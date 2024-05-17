@@ -10,19 +10,24 @@
     <div class="gameAll">
       <header>
         <h1 class="mainTitle">가위 바위 보 GAME</h1>
+        <div id="score"></div>
       </header>
+      <div id="imgRandom"></div>
+      <div id="result"></div>
       <div class="btnAll">
-        <div>
-          <button class="scissors">가위</button>
-          <button class="rock">바위</button>
-          <button class="paper">보</button>
+        <div class="rspBtns">
+          <!-- <img src="" alt="" id="a"> -->
+          <button id="scissors">가위</button>
+          <button id="rock">바위</button>
+          <button id="paper">보</button>
         </div>
         <div>
-          <button class="playBtn">시작하기</button>
-          <button class="playBtn">게임종료</button>
+          <button id="startBtn">시작하기</button>
+          <button id="endBtn">게임종료</button>
         </div>
       </div>
     </div>
     <script src="rsp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

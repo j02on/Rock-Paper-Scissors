@@ -6,12 +6,17 @@
   font-style: normal;
 }
 
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
 .mainTitle {
   font-size: 55px;
   font-family: "TTLaundryGothicB";
 }
 
-.playBtn {
+#startBtn {
   color: rgb(86, 86, 86);
   font-size: 30px;
   font-family: "TTLaundryGothicB";
@@ -22,29 +27,26 @@
   border-radius: 100px;
 }
 
-.scissors {
+#startBtn:hover {
+  background-color: rgb(190, 186, 186);
+}
+
+#endBtn {
   color: rgb(86, 86, 86);
-  font-size: 10x;
+  font-size: 30px;
   font-family: "TTLaundryGothicB";
   background-color: rgb(236, 235, 235);
-  width: 60px;
-  height: 30px;
+  width: 200px;
+  height: 60px;
   border: none;
   border-radius: 100px;
 }
 
-.rock {
-  color: rgb(86, 86, 86);
-  font-size: 10x;
-  font-family: "TTLaundryGothicB";
-  background-color: rgb(236, 235, 235);
-  width: 60px;
-  height: 30px;
-  border: none;
-  border-radius: 100px;
+#endBtn:hover {
+  background-color: rgb(190, 186, 186);
 }
 
-.paper {
+#scissors {
   color: rgb(86, 86, 86);
   font-size: 10x;
   font-family: "TTLaundryGothicB";
@@ -53,14 +55,57 @@
   height: 30px;
   border: none;
   border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scissors:hover {
+  background-color: rgb(190, 186, 186);
+}
+
+#rock {
+  color: rgb(86, 86, 86);
+  font-size: 10x;
+  font-family: "TTLaundryGothicB";
+  background-color: rgb(236, 235, 235);
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rock:hover {
+  background-color: rgb(190, 186, 186);
+}
+
+#paper {
+  color: rgb(86, 86, 86);
+  font-size: 10x;
+  font-family: "TTLaundryGothicB";
+  background-color: rgb(236, 235, 235);
+  width: 60px;
+  height: 30px;
+  border: none;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#paper:hover {
+  background-color: rgb(190, 186, 186);
 }
 
 .gameAll {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 350px;
+  height: 90vh;
 }
 
 .btnAll {
@@ -69,4 +114,44 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.rspBtns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#result {
+  font-family: "TTLaundryGothicB";
+  margin-bottom: 6px;
+  background-color: rgb(236, 235, 235);
+  border-radius: 100px;
+  width: 90px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#score {
+  font-family: "TTLaundryGothicB";
+  background-color: rgb(236, 235, 235);
+  color: rgb(86, 86, 86);
+  width: 85px;
+  height: 30px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.endText {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
 }
