@@ -9,6 +9,7 @@ const result = document.getElementById("result");
 const score = document.getElementById("score");
 const endBtn = document.getElementById("endBtn");
 const body = document.querySelector("body");
+const againBtn = document.querySelector("#againBtn");
 
 let win = 0;
 let lose = 0;
@@ -22,6 +23,8 @@ function startPage() {
   paperBtn.style.display = "none";
   result.style.display = "none";
   score.style.display = "none";
+  win = 0;
+  lose = 0;
 }
 
 function showPage() {
@@ -106,6 +109,24 @@ function scoreList(win, lose) {
 
 function endShow() {
   body.innerHTML = "<span class='endText'>게임이 종료되었습니다.</span>";
+  if (win > lose) {
+    result.innerHTML = "이겼습니다";
+  } else if (win === lose) {
+    result.innerHTML = "비겼습니다";
+  } else {
+    result.innerHTML = "졌습니다";
+  }
+  Swal.fire({
+    icon: "success",
+    title: `${result.innerHTML}`,
+    text: `${win} : ${lose}`,
+  });
+  // (`${win} : ${lose} ${result.innerHTML}`);
+}
+endBtn.addEventListener("click", endShow);
+
+function againshow() {
+  startPage();
 }
 
-endBtn.addEventListener("click", endShow);
+againBtn.addEventListener("click", againshow);
