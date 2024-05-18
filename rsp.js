@@ -21,13 +21,13 @@ function startPage() {
   rockBtn.style.display = "none";
   paperBtn.style.display = "none";
   result.style.display = "none";
+  score.style.display = "none";
 }
 
 function showPage() {
   scissorsBtn.style.display = "flex";
   rockBtn.style.display = "flex";
   paperBtn.style.display = "flex";
-  result.style.display = "flex";
   // const score = documnet.createElement("li");
 }
 
@@ -47,6 +47,8 @@ function randomCom() {
 }
 
 scissorsBtn.addEventListener("click", () => {
+  result.style.display = "flex";
+  score.style.display = "flex";
   printImg("./images/scissors.png");
   rspNum = 1;
   randomCom();
