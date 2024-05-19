@@ -29,6 +29,7 @@ function startPage() {
 }
 
 function showPage() {
+  document.querySelector(".endText").style.display = "none";
   scissorsBtn.style.display = "flex";
   rockBtn.style.display = "flex";
   paperBtn.style.display = "flex";
@@ -110,7 +111,13 @@ function scoreList(win, lose) {
 }
 
 function endShow() {
-  body.innerHTML = "<span class='endText'>게임이 종료되었습니다.</span>";
+  const copyBody = body.innerHTML;
+  body.innerHTML =
+    "<span class='endText'>게임이 종료되었습니다.</span><button id='againBtn'>다시하기</button>";
+  const againReturnBtn = document.getElementById("againBtn");
+  againReturnBtn.addEventListener("click", () => {
+    body.innerHTML = copyBody;
+  });
   if (win > lose) {
     result.innerHTML = "이겼습니다";
   } else if (win === lose) {
@@ -123,7 +130,6 @@ function endShow() {
     title: `${result.innerHTML}`,
     text: `${win} : ${lose}`,
   });
-  // (`${win} : ${lose} ${result.innerHTML}`);
 }
 endBtn.addEventListener("click", endShow);
 
