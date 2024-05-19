@@ -23,6 +23,7 @@ function startPage() {
   paperBtn.style.display = "none";
   result.style.display = "none";
   score.style.display = "none";
+  imgRandom.style.display = "none";
   win = 0;
   lose = 0;
 }
@@ -31,6 +32,7 @@ function showPage() {
   scissorsBtn.style.display = "flex";
   rockBtn.style.display = "flex";
   paperBtn.style.display = "flex";
+  imgRandom.style.display = "flex";
   // const score = documnet.createElement("li");
 }
 
@@ -126,7 +128,20 @@ function endShow() {
 endBtn.addEventListener("click", endShow);
 
 function againshow() {
-  startPage();
+  Swal.fire({
+    icon: "warning",
+    title: "다시 시작하시겠습니까?",
+    showCancelButton: true,
+    confirmButtonText: "시작하기",
+    cancelButtonText: "종료하기",
+    cancelButtonColor: "red",
+  }).then((result) => {
+    if (result.isConfirmed) {
+      startPage();
+    } else {
+      endShow();
+    }
+  });
 }
 
 againBtn.addEventListener("click", againshow);
