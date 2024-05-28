@@ -46,6 +46,21 @@ body {
   background-color: rgb(190, 186, 186);
 }
 
+#againBtn {
+  color: rgb(86, 86, 86);
+  font-size: 30px;
+  font-family: "TTLaundryGothicB";
+  background-color: rgb(236, 235, 235);
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 100px;
+}
+
+#againBtn:hover {
+  background-color: rgb(190, 186, 186);
+}
+
 #scissors {
   color: rgb(86, 86, 86);
   font-size: 10x;
@@ -147,11 +162,53 @@ body {
 }
 
 .endText {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
   font-weight: bold;
+}
+
+.mainAll {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.endWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.againTurnBtn {
+  color: rgb(86, 86, 86);
+  font-size: 30px;
+  font-family: "TTLaundryGothicB";
+  background-color: rgb(236, 235, 235);
+  width: 200px;
+  height: 60px;
+  border: none;
+  border-radius: 100px;
+  margin-top: 20%;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.againTurnBtn:hover {
+  background-color: rgb(190, 186, 186);
+}
+
+/* #againTurnBtn:hover {
+  background-color: rgb(190, 186, 186);
+} */
+
+.ramdomAll {
+  display: flex;
 }
